@@ -1,0 +1,162 @@
+/* RESET */
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+
+/* 🌈 BACKGROUND */
+.container {
+  display: flex;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #eef2ff, #e0f2fe);
+  color: #111827;
+  transition: all 0.3s ease;
+}
+
+/* 🌙 DARK MODE */
+.container.dark {
+  background: linear-gradient(135deg, #0f172a, #020617);
+  color: #f9fafb;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 240px;
+  padding: 20px;
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.6);
+  border-right: 1px solid rgba(255,255,255,0.3);
+}
+
+/* DARK SIDEBAR */
+.container.dark .sidebar {
+  background: rgba(30, 41, 59, 0.6);
+  border-color: rgba(255,255,255,0.1);
+}
+
+/* MAIN */
+.main {
+  flex: 1;
+  padding: 20px;
+}
+
+/* GLASS CARD */
+.card {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(14px);
+  border-radius: 16px;
+  padding: 18px;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease;
+}
+
+/* HOVER EFFECT */
+.card:hover {
+  transform: translateY(-4px);
+}
+
+/* DARK CARD */
+.container.dark .card {
+  background: rgba(30, 41, 59, 0.6);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* BUTTON */
+.theme-btn {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(135deg, #3b82f6, #6366f1);
+  color: #ffffff;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* SELECT */
+.select {
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+  margin-top: 5px;
+  
+}
+
+/* INPUT */
+input {
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+  margin-bottom: 10px;
+}
+
+/* TABLE */
+table {
+  width: 100%;
+  border-collapse: collapse;
+
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+/* DARK TABLE */
+.container.dark th,
+.container.dark td {
+  border-color: rgba(255,255,255,0.1);
+}
+
+
+
+
+
+
+
+.form {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.form input,
+.form select {
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+}
+
+.form button {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(135deg, #3b82f6, #6366f1);
+  color: white;
+  cursor: pointer;
+}
+
+.container.dark .form input,
+.container.dark .form select {
+  background: #374151;
+  color: white;
+}
+/* ✅ FIX: Button text visibility in dark mode */
+.container.dark .theme-btn {
+  background: linear-gradient(135deg, #1e293b, #334155); /* darker bg */
+  color: #f9fafb; /* white text */
+}
+
+/* Optional hover effect */
+.container.dark .theme-btn:hover {
+  background: linear-gradient(135deg, #334155, #475569);
+}
